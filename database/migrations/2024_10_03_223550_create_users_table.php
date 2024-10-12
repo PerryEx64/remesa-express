@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('home_address', 150)->nullable();
             $table->string('identification', 45);
-            $table->unsignedBigInteger('role_id');
-            $table->foreign('role_id')->references('id')->on('roles');
             $table->date('age');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
