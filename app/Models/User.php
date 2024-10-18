@@ -29,7 +29,6 @@ class User extends Authenticatable
         'password',
         'home_address',
         'identification',
-        'role_id',
         'age',
 
     ];
