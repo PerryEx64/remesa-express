@@ -15,5 +15,7 @@ class InfoEnvioController extends Controller{
     public function destinatario(){
         return view('DatosEnvios.destinatario');
     }
-    
+    public function nosotros(){
+        return view ('Ideales');
+    }
 }

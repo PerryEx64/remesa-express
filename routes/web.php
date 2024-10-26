@@ -22,3 +22,5 @@ Route::get('/infoenvio', [InfoEnvioController::class, 'infoenvio'])->name('infoe
 Route::get('/infocobro', [InfoEnvioController::class, 'infocobro'])->name('infocobro');
 
 Route::get('/destinatario', [InfoEnvioController::class, 'destinatario'])->name('destinatario');
+
+Route::get('/nosotros', [InfoEnvioController::class, 'nosotros'])->name('nosotros');
