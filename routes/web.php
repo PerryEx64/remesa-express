@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\InfoEnvioController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\InfoEnvioController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,3 +26,13 @@ Route::get('/infocobro', [InfoEnvioController::class, 'infocobro'])->name('infoc
 Route::get('/destinatario', [InfoEnvioController::class, 'destinatario'])->name('destinatario');
 
 Route::get('/nosotros', [InfoEnvioController::class, 'nosotros'])->name('nosotros');
+
+Route::get('/registro_cliente', function () {
+    return view('registro_cliente');
+});
+Route::get('/referencias', function () {
+    return view('referencias');
+});
+Route::get('/salario', function () {
+    return view('salario');
+});
