@@ -120,7 +120,7 @@
             </div>
 
             <div class="button-container">
-                <button type="submit">Continuar</button>
+                <button type="submit">Pagar</button>
             </div>
         </form>
     </div>

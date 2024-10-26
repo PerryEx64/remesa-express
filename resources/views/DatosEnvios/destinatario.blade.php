@@ -97,10 +97,12 @@
                                 <span>Remesas Express no se hace responsable por retrasos o fallos causados por factores externos fuera de nuestro control.</span>
                             </label>
                         </div>
-                        <div class="button-container">
-                            <button type="submit">Siguiente</button>
-                        </div>
                     </form>
+                    <div class="button-container" >
+                        <a href="{{ route('infoenvio') }}" class=" w-[150px] text-center  p-2 self-start rounded-lg bg-blue-800 text-white">
+                            Siguiente
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="image-section">

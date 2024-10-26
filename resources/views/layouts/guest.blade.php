@@ -20,12 +20,16 @@
     <body>
     <div class="mt-1">
         <img src="{{ asset('imagenes/remesa-express.png') }}" style="width: 130px; height: auto;" class="ml-auto mr-auto"  alt="Logo Remesa Express"/>
-        <div class="bg-[#6A994E] mt-[-1] h-9 w-full" ></div>
-    </div>
-        <div class="font-sans text-gray-900 dark:text-gray-100 antialiased">
-            {{ $slot }}
-        </div>
 
+        <div class="min-h-screen">
+            @livewire('navigation-menu')
+
+            <!-- Page Content -->
+            <div class="font-sans text-gray-900 dark:text-gray-100 antialiased">
+                {{ $slot }}
+            </div>
+        </div>
+    </div>
         @livewireScripts
     </body>
 </html>

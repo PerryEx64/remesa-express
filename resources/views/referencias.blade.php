@@ -1,10 +1,10 @@
 <x-guest-layout>
     <div class="flex flex-col items-center mt-6">
         <h2 class="text-black text-[40px] font-bold">Registro de Clientes</h2>
-        
+
         <!-- Contenedor del formulario con tamaño limitado -->
         <div class="w-full max-w-2xl p-6 bg-gray-200 rounded-lg mt-4 shadow-lg">
-            
+
             <!-- Referencias Bancarias -->
             <h3 class="text-black text-[25px] font-bold mb-4">Referencias Bancarias</h3>
             <div class="grid grid-cols-2 gap-6">
@@ -48,13 +48,10 @@
                     <x-input id="personal_phone2" class="block mt-1 w-full" type="text" name="personal_phone2" :value="old('personal_phone2')" autocomplete="personal_phone2" />
                 </div>
             </div>
-        </div>
 
-        <!-- Botón para enviar -->
-        <div class="mt-6">
-            <x-button class="p-8">
-                {{ __('Registrar') }}
-            </x-button>
+            <a href="{{ route('salario') }}" class="p-2 mt-8 w-[150px] text-center self-start rounded-lg bg-green-800 text-white">
+                Salario
+            </a>
         </div>
     </div>
 </x-guest-layout>

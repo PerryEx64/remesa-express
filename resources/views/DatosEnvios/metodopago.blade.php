@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <!-- Styles -->
-    @livewireStyles
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<x-app-layout>
     <style>
         .custom-card {
             max-width: 500px;
@@ -139,44 +125,44 @@
             margin: 5px 0; /* Espaciado ajustado */
         }
     </style>
-</head>
-<body class="bg-white-100">
-<div class="mt-1">
-    <img src="{{ asset('imagenes/remesa-express.png') }}" style="width: 130px; height: auto;" class="ml-auto mr-auto"  alt="Logo Remesa Express"/>
-    <div class="bg-[#6A994E] mt-[-1] h-9 w-full" ></div>
-</div>
-<div class="flex items-center justify-center min-h-screen">
-    <div class="form-container">
-        <div class="form-section">
-            <div class="custom-card">
-                <h2>¿Cómo te gustaría pagar?</h2>
-                <form>
-                    <div class="input-group">
-                        <button class="card-button" type="button">
-                            <span>Tarjeta de Crédito</span>
-                            <img src="{{ asset('imagenes/tarjeta.png') }}" alt="Tarjeta Crédito">
-                        </button>
-                        <button class="card-button" type="button">
-                            <span>Tarjeta de Débito</span>
-                            <img src="{{ asset('imagenes/tarjeta.png') }}" alt="Tarjeta Débito">
-                        </button>
-                    </div>
-                    <div class="button-container">
-                        <button type="submit">Continuar</button>
-                    </div>
-                </form>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="form-container">
+            <div class="form-section">
+                <div class="custom-card">
+                    <h2>¿Cómo te gustaría pagar?</h2>
+                    <form>
+                        <div class="input-group">
+                            <button class="card-button" type="button">
+                                <span>Tarjeta de Crédito</span>
+                                <img src="{{ asset('imagenes/tarjeta.png') }}" alt="Tarjeta Crédito">
+                            </button>
+                            <button class="card-button" type="button">
+                                <span>Tarjeta de Débito</span>
+                                <img src="{{ asset('imagenes/tarjeta.png') }}" alt="Tarjeta Débito">
+                            </button>
+                        </div>
+                        <div class="button-container" >
+                            <a href="{{ route('pago') }}" class=" w-[150px] text-center  p-2 self-start rounded-lg bg-blue-800 text-white">
+                                Siguiente
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Resumen de transacción -->
+            <div class="summary-section">
+                <div class="line-item">Tu resumen</div>
+                <hr>
+                <div class="line-item">Monto USD = Monto QT</div>
+                <div class="line-item">Comisión por envío</div>
+                <hr>
+                <div class="line-item">Total de transacción</div>
             </div>
         </div>
-        <!-- Resumen de transacción -->
-        <div class="summary-section">
-            <div class="line-item">Tu resumen</div>
-            <hr>
-            <div class="line-item">Monto USD = Monto QT</div>
-            <div class="line-item">Comisión por envío</div>
-            <hr>
-            <div class="line-item">Total de transacción</div>
-        </div>
     </div>
-</div>
-</body>
-</html>
+</x-app-layout>

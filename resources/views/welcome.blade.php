@@ -55,10 +55,14 @@
                 </div>
 
                 @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="p-2 self-start rounded-lg bg-blue-800 text-white">
+                    <a href="{{ route('register') }}" class=" w-[150px] text-center  p-2 self-start rounded-lg bg-blue-800 text-white">
                         Registrar
                     </a>
                 @endif
+
+                <a href="{{ route('nosotros') }}" class="p-2 w-[150px] text-center self-start rounded-lg bg-green-800 text-white">
+                    Nosotros
+                </a>
             </div>
         </div>
 

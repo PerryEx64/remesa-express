@@ -24,7 +24,7 @@
         </div>
 
         <!-- Sección: Datos de residencia -->
-        <div class="bg-gray-100 p-6 mt-6 rounded-lg shadow-lg">
+        <div class="bg-gray-100 p-6 mt-6 gap-3 rounded-lg shadow-lg">
             <h3 class="text-2xl font-semibold text-gray-700 mb-4">Datos de Residencia</h3>
             <div class="grid grid-cols-2 gap-6">
                 <!-- Estado -->
@@ -45,13 +45,13 @@
                     <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />
                 </div>
             </div>
+
+            <a href="{{ route('salario') }}" class="p-2 mt-8 w-[150px] text-center  rounded-lg bg-green-800 text-white">
+                Salario
+            </a>
         </div>
 
         <!-- Botón de registro -->
-        <div class="flex justify-center mt-6">
-            <x-button class="w-full sm:w-1/3">
-                {{ __('Registrar') }}
-            </x-button>
-        </div>
+
     </div>
 </x-guest-layout>
