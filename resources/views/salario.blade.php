@@ -30,13 +30,13 @@
             <div class="mt-6">
                 <div class="flex items-start">
                     <x-checkbox id="accept_privacy" name="accept_privacy" />
-                    <label for="accept_privacy" class="ml-2 text-sm font-medium text-gray-900"> 
+                    <label for="accept_privacy" class="ml-2 text-sm font-medium text-gray-900">
                         Usted declara que la información proporcionada es veraz y acepta nuestra Política de Privacidad.
                     </label>
                 </div>
                 <div class="flex items-start mt-4">
                     <x-checkbox id="accept_terms" name="accept_terms" />
-                    <label for="accept_terms" class="ml-2 text-sm font-medium text-gray-900"> 
+                    <label for="accept_terms" class="ml-2 text-sm font-medium text-gray-900">
                         Remesas Express no se hace responsable por retrasos o fallos causados por factores externos fuera de nuestro control.
                     </label>
                 </div>
@@ -46,7 +46,7 @@
         <!-- Botón de enviar -->
         <div class="mt-6">
             <x-button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
-                {{ __('Continuar') }}
+                {{ __('Guardar') }}
             </x-button>
         </div>
     </div>

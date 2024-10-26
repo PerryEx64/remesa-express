@@ -73,7 +73,8 @@
 <body class="bg-white-100">
     <div class="mt-1">
         <img src="{{ asset('imagenes/remesa-express.png') }}" style="width: 130px; height: auto;" class="ml-auto mr-auto"  alt="Logo Remesa Express"/>
-        <div class="bg-[#6A994E] mt-[-1] h-9 w-full" ></div>
+        <div class="bg-[#6A994E] mt-[-1] items-center h-9 w-full" >
+        </div>
     </div>
     <br>
     <br>
@@ -97,6 +98,9 @@
         <p class="about-text">
             Remesas Express: Enviando más que dinero, conectando vidas.
         </p>
+        <a href="{{ route('login') }}" class="ml-auto mr-auto p-2 w-[150px] text-center mt-3 rounded-lg bg-green-800 text-white">
+            Iniciar Sesion
+        </a>
     </div>
 </body>
 </html>

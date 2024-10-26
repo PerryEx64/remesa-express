@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 Route::get('/metodopago', [InfoEnvioController::class, 'metodopago'])->name('metodopago');
 Route::get('/pago', [InfoEnvioController::class, 'pago'])->name('pago');
 
@@ -29,10 +29,12 @@ Route::get('/nosotros', [InfoEnvioController::class, 'nosotros'])->name('nosotro
 
 Route::get('/registro_cliente', function () {
     return view('registro_cliente');
-});
+})->name('registro_cliente');
+
 Route::get('/referencias', function () {
     return view('referencias');
-});
+})->name('referencias');
+
 Route::get('/salario', function () {
     return view('salario');
-});
+})->name('salario');
