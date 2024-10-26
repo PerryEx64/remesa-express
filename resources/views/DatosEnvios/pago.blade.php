@@ -66,7 +66,7 @@
     </style>
     <x-slot name="header">
         <h2 class="font-semibold text-xl leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Dashboard Prueba') }}
         </h2>
     </x-slot>
 
