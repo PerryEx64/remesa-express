@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('home');
+});
 Route::get('/metodopago', [InfoEnvioController::class, 'metodopago'])->name('metodopago');
 Route::get('/pago', [InfoEnvioController::class, 'pago'])->name('pago');
 

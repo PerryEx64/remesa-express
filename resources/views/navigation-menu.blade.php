@@ -1,5 +1,6 @@
 <nav x-data="{ open: false }" class="bg-[#6A994E] border-b">
     <!-- Primary Navigation Menu -->
+    @if (Auth::check())
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
@@ -24,11 +25,12 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('infocobro') }}" :active="request()->routeIs('destinatario')">
+                    <x-nav-link href="{{ route('destinatario') }}" :active="request()->routeIs('destinatario')">
                         {{ __('Enviar Dinero') }}
                     </x-nav-link>
                 </div>
             </div>
+
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <!-- Teams Dropdown -->
@@ -182,4 +184,7 @@
             </div>
         </div>
     </div>
+    @else
+        <div class="bg-[#6A994E] mt-[-1] h-9 w-full" ></div>
+    @endif
 </nav>
