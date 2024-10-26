@@ -1,7 +1,12 @@
 <x-guest-layout>
+    <div class="flex items-center ml-auto mr-auto justify-center gap-14">
+        <div class="" >
+            <h2 class="text-black text-[40px] font-bold">Inicio Sesion</h2>
+            <h3 class="text-black text-[25px] text-gray-900" >Facil y Rapido</h3>
+        </div>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img src="{{ asset('icons/persona.png') }}" style="width: 60px; height: auto;" class="ml-auto mr-auto"  alt="Logo Remesa Express"/>
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -12,7 +17,7 @@
             </div>
         @endsession
 
-        <form method="POST" action="{{ route('login') }}">
+        <form class="aling-center gap-10 " method="POST" action="{{ route('login') }}">
             @csrf
 
             <div>
@@ -28,14 +33,14 @@
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-checkbox id="remember_me" name="remember" />
-                    <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+                    <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Recuerdame') }}</span>
                 </label>
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('Reiniciar contraseña?') }}
                     </a>
                 @endif
 
@@ -45,4 +50,5 @@
             </div>
         </form>
     </x-authentication-card>
+    </div>
 </x-guest-layout>
